@@ -26,9 +26,13 @@ class TinyTown extends Phaser.Scene {
         // First parameter: name of the layer from Tiled
         // https://newdocs.phaser.io/docs/3.54.0/Phaser.Tilemaps.Tilemap#createLayer
         this.grassLayer = this.map.createLayer("Grass-n-Houses", this.tileset, 0, 0);
+        this.castleLayer = this.map.createLayer("Castle", this.tileset, 0, 0);
         this.treeLayer = this.map.createLayer("Trees-n-Fences", this.tileset, 0, 0);
         this.grassLayer.setScale(4.0);
+        this.castleLayer.setScale(4.0);
         this.treeLayer.setScale(4.0);
+
+        document.getElementById('description').innerHTML = '<h2>Welcome to Tile Town!</h2>'
 
     }
 
